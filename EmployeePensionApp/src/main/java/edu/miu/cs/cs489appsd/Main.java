@@ -19,11 +19,11 @@ public class Main {
         int currentMonth = now.getMonthValue();
         LocalDate nextQuater;
 
-        if (currentMonth >= 1 && currentMonth <= 3) {
+        if (currentMonth <= 3) {
             nextQuater = LocalDate.of(now.getYear(), 4, 1);
-        } else if (currentMonth >= 4 && currentMonth <= 6) {
+        } else if (currentMonth <= 6) {
             nextQuater = LocalDate.of(now.getYear(), 7, 1);
-        } else if (currentMonth >= 7 && currentMonth <= 9) {
+        } else if (currentMonth <= 9) {
             nextQuater = LocalDate.of(now.getYear(), 10, 1);
         } else {
             nextQuater = LocalDate.of(now.getYear() + 1, 1, 1);
@@ -49,9 +49,8 @@ public class Main {
         employees.add(emp3);
         employees.add(emp4);
         employees.add(emp5);
-
-       printAllEmployee(employees);
-        printUpcomingEnrollees(employees);
+        printAllEmployee(employees);
+       printUpcomingEnrollees(employees);
 
     }
 }
